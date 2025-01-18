@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:#fcf5e9;
+    --container-normal:1100px;
+    --container-wide:1400px;
+    --container-narrow:900px;
+    --dark-color:#333;
+
+
+}
+body{
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* color: #fcf5e9; */
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* utility class */
+.bg-primary{
+    background:var(--primary-color);
+    color: #333;
+}
+.bg-dark{
+    background: var(--dark-color);
+    color: #fff;
+}
+.bg-dark,.bg-primary{
+    padding: 0 0.3rem;
+}
+
+.section-heading{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* container */
+.container{
+    max-width: var(--container-normal);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+ 
+
+}
+.container-lg{
+    max-width: var(--container-wide);
+}
+
+.container-sm{
+    max-width: var(--container-narrow);
+}
+
+/* navigation */
+.logo-header{
+    width: 130px;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+}
+.nav-container .header-right{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+}
+.nav-container .header-right a{
+    padding:0.5rem 1rem;
+}
+
+
+
+.current{
+    background: var(--primary-color);
+    font-weight: 600;
+}
+
+
+/* main body */
+
+.hero{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    
+    
+}
+.hero h2{
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+
+.main-container .gallary-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+     gap: 20px;
+
+}
+.gallary-item {
+    width: calc(33.333% - 20px );
+    border-radius: 8px;
+
+}
+.gallary-item :hover{
+    opacity: 0.9;
+}
+
+.gallary-item img{
+    border-radius: 10px;
+}
+
+.team-img{
+    width: 100%;
+    height: 250px;
+    max-width: 350px;
+    border-radius: 10px;
+   
+}
+
+/* footer */
+footer{
+    border-top: 1px solid #aaa;
+    padding: 2rem 1.5rem;
+    margin-top:2rem ; 
+   
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo-footer{
+
+    max-width: 120px;
+    height: 35px
+}
+
+.footer h4{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.footer a{
+    margin: 0.2rem;
+}
+
+
+/* about us */
+
+.services{
+    padding: 3rem 0 4rem;
+}
+
+.service-flex{
+    display: flex;
+    gap: 2rem;
+}
+.service-item h4{
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* team-about-us */
+.team{
+    padding: 3rem 0 4rem;
+}
+
+.team-flex{
+    display: flex;
+    gap: 1.4rem;
+}
+.team img{
+    border-radius: 10px;
+}
+
+/* contact us */
+.contact-us{
+    padding:3rem 0 4rem ;
+}
+.contact-us-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+
+  
+}
+
+.contact-us-hero h2{
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+   
+}
+.contact-us-header h2{
+    text-align: center;
+    margin-bottom: 2.35rem;
+}
+.contact-us-header p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.form-group{
+    margin: 2rem 0;
+
+}
+
+.form-group input{
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding-bottom:1.5rem ;
+}
+.visually-hidden{
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.text-area textarea{
+    overflow: hidden;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 1.4rem;
+}
+.contact-us input:focus,
+.contact-us textarea:focus{
+    outline: 0;
+}
+
+.btn{
+    display: block;
+   width: 100%;
+   padding: 1rem;
+   background-color:transparent;
+   font-family: inherit;
+   font-size: inherit;
+   margin-bottom: 8rem;
+   cursor: pointer;
+}
+.btn:hover{
+    background-color: #333;
+    color: #fff;
+}
+/* media queries */
+@media(max-width:768px){
+    .nav-container,
+    .footer-flex,
+    .services .service-flex,
+    .team .team-flex{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero{
+        height: 300px;
+    }
+    .hero h2{
+        font-size: 1.8rem;
+    }
+    .gallary-item{
+        width: calc(50% - 20px);
+    }
+
+    .footer .footer-flex{
+        text-align: center;
+    }
+    
+}
